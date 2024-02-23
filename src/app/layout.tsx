@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { SessionWrapper } from "./providers/provider-session";
+import { ReactNode, Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,12 +13,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  session,
 }: Readonly<{
   children: React.ReactNode;
+  session: any;
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <SessionWrapper session={session}>
+          <Suspense>{children}</Suspense>
+        </SessionWrapper>
+      </body>
     </html>
   );
 }
