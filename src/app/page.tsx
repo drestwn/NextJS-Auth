@@ -47,7 +47,7 @@ export default function Home() {
             <form className="space-y-6" onSubmit={onSubmit}>
               <div>
                 <label className="block text-sm font-medium leading-6 text-gray-900">
-                  Username kminchelle
+                  Username "kminchelle"
                 </label>
                 <div className="mt-2">
                   <input
@@ -63,7 +63,7 @@ export default function Home() {
               <div>
                 <div className="flex items-center justify-between">
                   <label className="block text-sm font-medium leading-6 text-gray-900">
-                    Password 0lelplR
+                    Password "0lelplR"
                   </label>
                   <div className="text-sm">
                     <a
@@ -101,7 +101,7 @@ export default function Home() {
                 href="#"
                 className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
               >
-                Start a 14 day free trial
+                Read again, that is the credential
               </a>
             </p>
           </div>
